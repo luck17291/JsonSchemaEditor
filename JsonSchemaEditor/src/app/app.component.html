@@ -1,16 +1,21 @@
 <div class="container-fluid">
   <div class="row">
-    <div class="col col-sm">
-      <basic-info 
-      [(schema)]="mySchema"
-      [(model)]="myModel"
-      ></basic-info>
-    </div>
-    <div class="col col-sm">
+    <div class="btn-group" role="group" aria-label="Basic example">
       <button type="button" class="btn btn-primary" (click)="onUpdateSchema()">Update Schema</button>
-      <textarea class="schema-input"
-      [(ngModel)]="mySchemaStr"
-      ></textarea>
+      <button type="button" class="btn btn-secondary" (click)="onUpdateSchema()">Show Schema</button>
+      <button type="button" class="btn btn-danger" (click)="onUpdateSchema()">Hide Schema</button>
     </div>
+
+  </div>
+  <div class="row">
+    <div class="col col-sm">
+      <generic-form [(schema)]="mySchema" [(model)]="myModel"></generic-form>
+    </div>
+    <div class="col col-sm">
+      <textarea class="schema-input" [(ngModel)]="mySchemaStr"></textarea>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm">{{myModel | json}}</div>
   </div>
 </div>

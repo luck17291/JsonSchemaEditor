@@ -1,10 +1,10 @@
 import { Component, Input } from '@angular/core';
 
 @Component({
-    selector: 'basic-info',
-    templateUrl: 'basic-info.component.html'
+    selector: 'generic-form',
+    templateUrl: 'generic-form.component.html'
 })
-export class BasicInfoComponent {
+export class GenericComponent {
     @Input() schema: string;
     @Input() model: string;
 }
