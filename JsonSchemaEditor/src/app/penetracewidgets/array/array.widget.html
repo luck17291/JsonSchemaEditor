@@ -1,0 +1,9 @@
+<div class="widget form-group">
+    <label [attr.for]="id" class="horizontal control-label">
+        {{ schema.title }}
+    </label>
+    <span *ngIf="schema.description" class="formHelp">{{schema.description}}</span>
+    <div *ngFor="let itemProperty of formProperty.properties">
+        <sf-form-element [formProperty]="itemProperty"></sf-form-element>
+    </div>
+</div>

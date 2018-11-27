@@ -10,7 +10,7 @@ import { JsonService } from './jsonSchema/json.service';
 export class AppComponent implements OnInit {
   mySchemaStr = '';
   mySchema = {};
-  myModel = { "baseOn": "None", "surveyLanguage": "NO", "surveyType": "2", "surveyName": "New survey", "sampleType": "1", "contactMethod": "1", "collectionMethod": "1", "targetGroup": "1" };
+  myModel = {};
 
   constructor(private jsonService: JsonService) {
 
